@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PartyAsk</string>
+    <string name="partyask">
+PartyAsk
+</string>
+    <string name="jointoparty">
+Join to party
+</string>
+    <string name="login">
+Log in
+</string>
+    <string name="createaccount">
+Create account
+</string>
+    <string name="logo_de_la_app">logo de la app</string>
+</resources>

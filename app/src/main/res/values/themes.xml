@@ -6,7 +6,7 @@
     </style>
 
     <style name="partyask">
-        <item name="android:textSize">64sp</item>
+        <item name="android:textSize">78sp</item>
     </style>
 
     <style name="normal">

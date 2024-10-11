@@ -7,10 +7,10 @@ PartyAsk
 Join to party
 </string>
     <string name="login">
-Log in
+Login
 </string>
     <string name="createaccount">
-Create account
+Create an account
 </string>
     <string name="logo_de_la_app">logo de la app</string>
 </resources>

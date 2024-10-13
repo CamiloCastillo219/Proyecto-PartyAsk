@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Botón de retroceso -->
+    <ImageView
+        android:id="@+id/backmain"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <!-- Texto "Create an Account" -->
+
+    <!-- Campo de texto "Username" -->
+
+    <!-- Campo de texto "Email" -->
+
+    <TextView
+        android:id="@+id/create_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/istok_web_bold"
+        android:lineSpacingExtra="-28sp"
+        android:text="@string/create_an_account"
+        android:textAppearance="@style/normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backmain" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="330dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bordercolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center|left"
+        android:text="@string/username"
+        android:textAppearance="@style/normal"
+        android:textColor="#78909C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_account_text" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="330dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bordercolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center|left"
+        android:text="@string/password"
+        android:textAppearance="@style/normal"
+        android:textColor="#78909C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <EditText
+        android:id="@+id/conpassword"
+        android:layout_width="330dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bordercolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center|left"
+        android:text="@string/conpassword"
+        android:textAppearance="@style/normal"
+        android:textColor="#78909C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <CheckBox
+        android:id="@+id/term_and_condict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/accept_terms_and_conditions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conpassword" />
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="330dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/term_and_condict" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="330dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/colorfullback"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="-28sp"
+        android:text="@string/register"
+        android:textAppearance="@style/normal"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_2" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="330dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bordercolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center|left"
+        android:text="@string/email"
+        android:textAppearance="@style/normal"
+        android:textColor="#78909C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <!-- Campo de texto "Password" -->
+
+    <!-- Campo de texto "Confirm Password" -->
+
+    <!-- Checkbox "Accept Terms and Conditions" -->
+
+    <!-- Línea divisoria -->
+
+    <!-- Botón "Register" -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

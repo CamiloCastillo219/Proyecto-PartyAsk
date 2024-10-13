@@ -12,5 +12,28 @@ Login
     <string name="createaccount">
 Create an account
 </string>
+    <string name="email">
+" Email"
+</string>
+    <string name="password">
+" Password"
+</string>
+    <string name="conpassword">
+" Confirm password"
+</string>
+    <string name="register">
+" Register"
+</string>
+    <string name="username">
+" Username"
+</string>
+    <string name="backicon">
+" Icono usado para devolverse al menu de inicio"
+</string>
+
     <string name="logo_de_la_app">logo de la app</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="accept_terms_and_conditions">Accept terms and conditions</string>
+    <string name="log_in_count">Sign in</string>
+    <string name="remember_me">Remember me</string>
 </resources>

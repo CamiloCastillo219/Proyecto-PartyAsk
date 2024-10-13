@@ -11,10 +11,11 @@
         android:id="@+id/imageView"
         android:layout_width="391dp"
         android:layout_height="371dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/logo"
         android:contentDescription="@string/logo_de_la_app"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +31,7 @@
         android:textAppearance="@style/partyask"
         android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView" />
 
@@ -39,9 +40,9 @@
         android:layout_width="254dp"
         android:layout_height="61dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/join_to_party"
+        android:background="@drawable/colorfullback"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/istok_web_bold"
@@ -56,32 +57,11 @@
         app:layout_constraintTop_toBottomOf="@id/partyask" />
 
     <TextView
-        android:id="@+id/log_in"
-        android:layout_width="254dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/log_in"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/istok_web_bold"
-        android:gravity="center"
-        android:lineSpacingExtra="-28sp"
-        android:text="@string/login"
-        android:textAppearance="@style/normal"
-        android:textColor="@color/purple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/join_to_party" />
-
-    <TextView
         android:id="@+id/create_account"
         android:layout_width="254dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:clickable="true"
         android:focusable="true"
@@ -96,12 +76,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/log_in" />
 
+    <TextView
+        android:id="@+id/log_in"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bordercolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="-28sp"
+        android:text="@string/login"
+        android:textAppearance="@style/normal"
+        android:textColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/join_to_party" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_end="894dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

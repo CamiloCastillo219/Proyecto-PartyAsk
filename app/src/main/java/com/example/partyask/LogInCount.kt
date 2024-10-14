@@ -37,6 +37,8 @@ class LogInCount : AppCompatActivity() {
             if (username.isNotEmpty() && password.isNotEmpty()) {
                 // Lógica para entrar a una cuenta
                 Toast.makeText(this, "Wellcome $username", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, HomePage::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }

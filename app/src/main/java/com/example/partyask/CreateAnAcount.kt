@@ -34,6 +34,8 @@ class CreateAnAcount : AppCompatActivity() {
             if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && conpassword.isNotEmpty() && (password == conpassword)) {
                 // Lógica para crear la cuenta
                 Toast.makeText(this, "Account Created for $username", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, HomePage::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }

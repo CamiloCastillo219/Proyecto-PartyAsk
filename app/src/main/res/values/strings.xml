@@ -36,4 +36,9 @@ Create an account
     <string name="accept_terms_and_conditions">Accept terms and conditions</string>
     <string name="log_in_count">Sign in</string>
     <string name="remember_me">Remember me</string>
+    <string name="home">Home</string>
+    <string name="host_a_party">Host a party</string>
+    <string name="explore_modes">Explore modes</string>
+    <string name="explore_collections">Explore collections</string>
+    <string name="create_a_collection">Create a collection</string>
 </resources>

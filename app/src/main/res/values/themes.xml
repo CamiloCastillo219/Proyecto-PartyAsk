@@ -25,5 +25,13 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="Innertitle">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="nameless">
+        <item name="android:textSize">32sp</item>
+    </style>
+
     <style name="Theme.PartyAsk" parent="Base.Theme.PartyAsk" />
 </resources>

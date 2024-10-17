@@ -11,6 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val goToCodepassing = findViewById<TextView>(R.id.join_to_party)
+        goToCodepassing.setOnClickListener {
+            val intent = Intent(this, CodePass::class.java)
+            startActivity(intent)
+        }
+
         val createAccountTextView = findViewById<TextView>(R.id.create_account)
         createAccountTextView.setOnClickListener {
             val intent = Intent(this, CreateAnAcount::class.java)

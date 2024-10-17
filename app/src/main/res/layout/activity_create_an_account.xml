@@ -48,7 +48,7 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/istok_web"
-        android:gravity="center|left"
+        android:gravity="center"
         android:text="@string/username"
         android:textAppearance="@style/normal"
         android:textColor="#78909C"
@@ -65,7 +65,7 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/istok_web"
-        android:gravity="center|left"
+        android:gravity="center"
         android:text="@string/password"
         android:textAppearance="@style/normal"
         android:textColor="#78909C"
@@ -82,22 +82,27 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/istok_web"
-        android:gravity="center|left"
+        android:gravity="center"
         android:text="@string/conpassword"
         android:textAppearance="@style/normal"
         android:textColor="#78909C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password" />
 
-    <CheckBox
+    <TextView
         android:id="@+id/term_and_condict"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="219dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center|left"
         android:text="@string/accept_terms_and_conditions"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/conpassword" />
+        app:layout_constraintTop_toBottomOf="@id/conpassword"
+        tools:ignore="RtlHardcoded" />
 
     <View
         android:id="@+id/rectangle_2"
@@ -137,12 +142,21 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/istok_web"
-        android:gravity="center|left"
+        android:gravity="center"
         android:text="@string/email"
         android:textAppearance="@style/normal"
         android:textColor="#78909C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/term_and_condict"
+        app:layout_constraintTop_toBottomOf="@id/conpassword"
+        tools:ignore="MissingConstraints" />
 
     <!-- Campo de texto "Password" -->
 

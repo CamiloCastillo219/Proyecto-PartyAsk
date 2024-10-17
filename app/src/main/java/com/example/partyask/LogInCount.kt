@@ -3,6 +3,7 @@ package com.example.partyask
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,7 +17,29 @@ class LogInCount : AppCompatActivity() {
         setContentView(R.layout.activity_log_in_count)
 
         val usernameField = findViewById<EditText>(R.id.username)
+        usernameField.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                if (usernameField.text.toString() == getString(R.string.username)) {
+                    usernameField.setText("")
+                }
+            } else {
+                if (usernameField.text.toString().isEmpty()) {
+                    usernameField.setText(getString(R.string.username))
+                }
+            }
+        }
         val passwordField = findViewById<EditText>(R.id.password)
+        passwordField.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                if (passwordField.text.toString() == getString(R.string.password)) {
+                    passwordField.setText("")
+                }
+            } else {
+                if (passwordField.text.toString().isEmpty()) {
+                    passwordField.setText(getString(R.string.password))
+                }
+            }
+        }
         val loginAccountButton = findViewById<TextView>(R.id.register)
 
         val backtomenuImageView = findViewById<ImageView>(R.id.backmain)

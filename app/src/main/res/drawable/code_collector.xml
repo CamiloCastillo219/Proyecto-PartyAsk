@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="254dp"
+    android:height="80dp"
+    android:viewportWidth="254"
+    android:viewportHeight="60"
+    >
+
+    <!-- Fondo redondeado -->
+    <path
+        android:pathData="M10,4
+                          H244
+                          A10,10 0 0 1 254,14
+                          V46
+                          A10,10 0 0 1 244,56
+                          H10
+                          A10,10 0 0 1 0,46
+                          V14
+                          A10,10 0 0 1 10,4Z"
+        android:fillColor="@color/black"
+        />
+
+    <!-- Borde exterior redondeado -->
+    <path
+        android:pathData="M10,4
+                          H244
+                          A10,10 0 0 1 254,14
+                          V46
+                          A10,10 0 0 1 244,56
+                          H10
+                          A10,10 0 0 1 0,46
+                          V14
+                          A10,10 0 0 1 10,4Z"
+        android:strokeWidth="4"
+        android:strokeColor="@color/black"
+        android:fillColor="@android:color/transparent"
+        />
+
+</vector>

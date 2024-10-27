@@ -2,98 +2,51 @@ package com.example.partyask
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class CreateAnAcount : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_an_account)
 
+        // Inicializa Firebase Auth
+        auth = FirebaseAuth.getInstance()
+
         val usernameField = findViewById<EditText>(R.id.username)
-        usernameField.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                if (usernameField.text.toString() == getString(R.string.username)) {
-                    usernameField.setText("")
-                }
-            } else {
-                if (usernameField.text.toString().isEmpty()) {
-                    usernameField.setText(getString(R.string.username))
-                }
-            }
-        }
         val emailField = findViewById<EditText>(R.id.email)
-        emailField.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                if (emailField.text.toString() == getString(R.string.email)) {
-                    emailField.setText("")
-                }
-            } else {
-                if (emailField.text.toString().isEmpty()) {
-                    emailField.setText(getString(R.string.email))
-                }
-            }
-        }
         val passwordField = findViewById<EditText>(R.id.password)
-        passwordField.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                if (passwordField.text.toString() == getString(R.string.password)) {
-                    passwordField.setText("")
-                }
-            } else {
-                if (passwordField.text.toString().isEmpty()) {
-                    passwordField.setText(getString(R.string.password))
-                }
-            }
-        }
         val conpasswordField = findViewById<EditText>(R.id.conpassword)
-        conpasswordField.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                if (conpasswordField.text.toString() == getString(R.string.conpassword)) {
-                    conpasswordField.setText("")
-                }
-            } else {
-                if (conpasswordField.text.toString().isEmpty()) {
-                    conpasswordField.setText(getString(R.string.conpassword))
-                }
-            }
-        }
         val createAccountButton = findViewById<TextView>(R.id.register)
-
-
-
-        val backtomenuImageView = findViewById<ImageView>(R.id.backmain)
-        backtomenuImageView.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
+        val backToMenuImageView = findViewById<ImageView>(R.id.backmain)
         val goTermsAndCondition = findViewById<TextView>(R.id.term_and_condict)
+
+        // Configura los campos para borrar el texto de ayuda al hacer clic y restaurarlo si se dejan vacíos
+        setupField(usernameField, getString(R.string.username))
+        setupField(emailField, getString(R.string.email))
+
+        // Configura las contraseñas con formato de asteriscos (****)
+        setupPasswordField(passwordField, getString(R.string.password))
+        setupPasswordField(conpasswordField, getString(R.string.conpassword))
+
+        backToMenuImageView.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
         goTermsAndCondition.setOnClickListener {
-            val intent = Intent(this, termsCondition::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, termsCondition::class.java))
         }
 
-        val usernameEditText = findViewById<EditText>(R.id.username)
-
-// Listener para borrar el texto cuando se selecciona
-        usernameEditText.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                // Si el campo tiene el foco, borrar el texto
-                if (usernameEditText.text.toString() == getString(R.string.username)) {
-                    usernameEditText.setText("")
-                }
-            } else {
-                // Si el campo pierde el foco y está vacío, restaurar el texto
-                if (usernameEditText.text.toString().isEmpty()) {
-                    usernameEditText.setText(getString(R.string.username))
-                }
-            }
-        }
         createAccountButton.setOnClickListener {
             val username = usernameField.text.toString()
             val email = emailField.text.toString()
@@ -101,13 +54,82 @@ class CreateAnAcount : AppCompatActivity() {
             val conpassword = conpasswordField.text.toString()
 
             if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && conpassword.isNotEmpty() && (password == conpassword)) {
-                // Lógica para crear la cuenta
-                Toast.makeText(this, "Account Created for $username", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, HomePage::class.java)
-                startActivity(intent)
+                createAccount(username, email, password)
             } else {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error al crear la cuenta, inicie otra vez", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun setupField(field: EditText, hintText: String) {
+        field.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                if (field.text.toString() == hintText) {
+                    field.setText("")
+                }
+            } else {
+                if (field.text.toString().isEmpty()) {
+                    field.setText(hintText)
+                }
+            }
+        }
+    }
+
+    private fun setupPasswordField(field: EditText, hintText: String) {
+        field.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        field.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                if (field.text.toString() == hintText) {
+                    field.setText("")
+                }
+            } else {
+                if (field.text.toString().isEmpty()) {
+                    field.setText(hintText)
+                }
+            }
+        }
+    }
+
+    // Define la clase User para almacenar los datos en la base de datos
+    data class User(
+        val username: String? = null,
+        val email: String? = null
+    )
+
+    private fun createAccount(username: String, email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Usuario registrado correctamente
+                    val userId = auth.currentUser?.uid
+                    userId?.let {
+                        saveUserToDatabase(it, username, email)
+                        Toast.makeText(this, "Account Created for $username", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this, HomePage::class.java))
+                    }
+                } else {
+                    // Muestra el error en el registro
+                    Toast.makeText(this, "Error in registration: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+    private fun saveUserToDatabase(userId: String, username: String, email: String) {
+        // Referencia a la base de datos
+        val database = FirebaseDatabase.getInstance()
+        val usersRef = database.getReference("users")
+
+        // Crea el objeto User con la información del usuario
+        val user = User(username, email)
+
+        // Guarda el usuario en la base de datos con su userId
+        usersRef.child(userId).setValue(user)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "User saved to database", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Failed to save user: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

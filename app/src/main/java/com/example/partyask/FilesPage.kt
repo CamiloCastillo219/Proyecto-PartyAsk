@@ -1,22 +1,14 @@
 package com.example.partyask
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.partyask.CodePass
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomePage : AppCompatActivity() {
+class FilesPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_page)
-
-        val goToCodepassing = findViewById<TextView>(R.id.join_to_party)
-        goToCodepassing.setOnClickListener {
-            val intent = Intent(this, CodePass::class.java)
-            startActivity(intent)
-        }
+        setContentView(R.layout.activity_files)
 
         // Configuración del BottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)

@@ -17,11 +17,11 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/hometext"
+        android:id="@+id/filetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/istok_web_bold"
-        android:text="@string/home"
+        android:text="@string/collection"
         android:gravity="center"
         android:elevation="8dp"
         android:textAppearance="@style/Title"
@@ -46,77 +46,80 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/HostParty"
+                android:id="@+id/Guess_who"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
-                android:background="@drawable/colorfullback"
+                android:background="@drawable/grey_button_background"
+                android:elevation="1dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/host_a_party"
+                android:text="@string/guess_who_basics"
                 android:textAppearance="@style/normal"
-                android:textColor="@color/textcolor" />
+                android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/join_to_party"
+                android:id="@+id/Most_propably"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/colorfullback"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/jointoparty"
+                android:text="@string/most_probably_of_basics"
                 android:textAppearance="@style/normal"
-                android:textColor="@color/textcolor" />
-
-            <View
-                android:id="@+id/rectangle_2"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="24dp"
-                android:background="@color/black" />
-
-            <TextView
-                android:id="@+id/exploremodes"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/explore_modes"
-                android:textAppearance="@style/Subtitle"
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/explorecollections"
+                android:id="@+id/true_false"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/explore_collections"
-                android:textAppearance="@style/Subtitle"
+                android:text="@string/true_or_false_basics"
+                android:textAppearance="@style/normal"
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/createcollection"
+                android:id="@+id/free_questions"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/create_a_collection"
-                android:textAppearance="@style/Subtitle"
+                android:text="@string/free_questions_basics"
+                android:textAppearance="@style/normal"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/create_new"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:text="@string/create_a_new_collection"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+
         </LinearLayout>
     </ScrollView>
 

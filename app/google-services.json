@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "775919683174",
+    "project_id": "partyask",
+    "storage_bucket": "partyask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775919683174:android:fb4f58dc1764e683facfa7",
+        "android_client_info": {
+          "package_name": "com.example.partyask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIad2z1QwH_9YOfpddkEGUuMx2Z0A1eI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

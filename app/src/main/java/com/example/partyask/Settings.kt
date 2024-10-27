@@ -1,21 +1,27 @@
 package com.example.partyask
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.partyask.CodePass
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomePage : AppCompatActivity() {
 
+class Settings : AppCompatActivity() {
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_page)
+        setContentView(R.layout.activity_settings)
 
-        val goToCodepassing = findViewById<TextView>(R.id.join_to_party)
-        goToCodepassing.setOnClickListener {
-            val intent = Intent(this, CodePass::class.java)
-            startActivity(intent)
+        val loginback = findViewById<TextView>(R.id.back_to_log)
+        loginback.setOnClickListener{
+            startActivity(Intent(this, LogInCount::class.java))
+        }
+
+        val goterms = findViewById<TextView>(R.id.terminos_condiciones)
+        goterms.setOnClickListener{
+            startActivity(Intent(this, termsCondition::class.java))
         }
 
         // Configuración del BottomNavigationView

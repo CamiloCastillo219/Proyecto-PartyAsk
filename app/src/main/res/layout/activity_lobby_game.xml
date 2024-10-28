@@ -18,11 +18,11 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/filetext"
+        android:id="@+id/lobbytext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/istok_web_bold"
-        android:text="@string/settings"
+        android:text="@string/lobby"
         android:gravity="center"
         android:elevation="8dp"
         android:textAppearance="@style/Title"
@@ -31,91 +31,90 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- EditText para ingresar el nombre del jugador -->
+
+
     <!-- Contenido desplazable dentro de ScrollView -->
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/topbackground"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@id/randomcodeback"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/topbackground">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="10dp">
 
+            <!-- Jugadores -->
             <TextView
-                android:id="@+id/back_to_log"
+                android:id="@+id/player1"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:elevation="1dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/cerrar_sesi_n"
-                android:textAppearance="@style/normal"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/change_name"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:elevation="1dp"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/grey_button_background"
                 android:fontFamily="@font/istok_web"
                 android:gravity="center"
-                android:text="@string/cambiar_nombre_de_usuario"
-                android:textAppearance="@style/normal"
+                android:textAppearance="@style/Subtitle"
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/terminos_condiciones"
+                android:id="@+id/player2"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:elevation="1dp"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/grey_button_background"
                 android:fontFamily="@font/istok_web"
                 android:gravity="center"
-                android:text="@string/terminos_y_condiciones"
-                android:textAppearance="@style/normal"
-                android:textColor="@color/black" />
+                android:text="@string/player2"
+                android:textAppearance="@style/Subtitle"
+                android:textColor="@color/black"
+                android:visibility="gone" />
 
             <TextView
-                android:id="@+id/politica_privacidad"
+                android:id="@+id/player3"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:elevation="1dp"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/grey_button_background"
                 android:fontFamily="@font/istok_web"
                 android:gravity="center"
-                android:text="@string/politica_de_privacidad"
-                android:textAppearance="@style/normal"
-                android:textColor="@color/black" />
+                android:text="@string/player3"
+                android:textAppearance="@style/Subtitle"
+                android:textColor="@color/black"
+                android:visibility="gone" />
 
             <TextView
-                android:id="@+id/idioma"
+                android:id="@+id/player4"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:elevation="1dp"
-                android:clickable="true"
-                android:focusable="true"
+                android:background="@drawable/grey_button_background"
                 android:fontFamily="@font/istok_web"
                 android:gravity="center"
-                android:text="@string/cambiar_idioma"
+                android:text="@string/player4"
+                android:textAppearance="@style/Subtitle"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <!-- Botón para iniciar el juego -->
+            <TextView
+                android:id="@+id/startgame"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/colorfullback"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:text="@string/start_game"
                 android:textAppearance="@style/normal"
-                android:textColor="@color/black" />
-
-
+                android:textColor="@color/textcolor" />
         </LinearLayout>
     </ScrollView>
 
@@ -131,4 +130,27 @@
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
+
+    <!-- Parte inferior fija para el código de sala -->
+    <View
+        android:id="@+id/randomcodeback"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#F0EEEE"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/randomtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@font/istok_web_bold"
+        android:gravity="left"
+        android:text="Room code:"
+        android:textAppearance="@style/Innertitle"
+        app:layout_constraintBottom_toBottomOf="@id/randomcodeback"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

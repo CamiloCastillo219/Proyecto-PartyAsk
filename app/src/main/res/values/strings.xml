@@ -68,4 +68,16 @@ Create an account
     <string name="terminos_y_condiciones">Terminos y condiciones</string>
     <string name="cambiar_nombre_de_usuario">Cambiar nombre de usuario</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
+    <string name="lobby">Lobby</string>
+    <string name="party_group">Party group:</string>
+    <string name="randomcode">------</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="player3">Player 3</string>
+    <string name="start_game">START GAME</string>
+    <string name="modes">Modes</string>
+    <string name="choise_a_name">Choise a name</string>
+    <string name="join">Join</string>
+    <string name="please_type_your_name_for_the_room">Please type your name for the room</string>
+    <string name="player4">Player 4</string>
 </resources>

@@ -3,7 +3,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.partyask.CodePass
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomePage : AppCompatActivity() {
@@ -15,6 +14,12 @@ class HomePage : AppCompatActivity() {
         val goToCodepassing = findViewById<TextView>(R.id.join_to_party)
         goToCodepassing.setOnClickListener {
             val intent = Intent(this, CodePass::class.java)
+            startActivity(intent)
+        }
+
+        val goToCodeName = findViewById<TextView>(R.id.HostParty)
+        goToCodeName.setOnClickListener {
+            val intent = Intent(this, HostName::class.java)
             startActivity(intent)
         }
 

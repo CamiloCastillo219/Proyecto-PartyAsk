@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/background_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fullbackground_quest"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="308dp"
+        android:layout_height="708dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/emplyspace_canvas"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/background_ask"
+        app:layout_constraintEnd_toStartOf="@+id/background_ask"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/background_ask"
+        app:layout_constraintTop_toBottomOf="@+id/background_ask"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/backmain_sc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="132dp"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrow"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/Choise_a_name"
+        android:layout_width="258dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="72dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/istok_web_bold"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="-10dp"
+        android:text="@string/choise_a_name"
+        android:textAppearance="@style/Innertitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backmain_sc" />
+
+    <EditText
+        android:id="@+id/codewriter"
+        android:layout_width="244dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints="@string/write_the_code_for_join_a_party"
+        android:background="@drawable/code_collector"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center"
+        android:text="@string/Empty"
+        android:textAppearance="@style/Innertitle"
+        android:textColor="#78909C"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Choise_a_name"
+        tools:ignore="TextFields" />
+
+
+    <TextView
+        android:id="@+id/hint_to_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="12dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/istok_web"
+        android:text="@string/please_type_your_name_for_the_room"
+        android:textAppearance="@style/little"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/codewriter" />
+
+    <TextView
+        android:id="@+id/Enter_to_party_invite"
+        android:layout_width="186dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/colorfullback"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:fontFamily="@font/istok_web_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="-28sp"
+        android:text="@string/join"
+        android:textAppearance="@style/normal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_to_join" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

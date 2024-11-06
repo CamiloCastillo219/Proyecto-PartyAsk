@@ -99,7 +99,7 @@
                 android:background="@drawable/grey_button_background"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web_bold"
+                android:fontFamily="@font/istok_web"
                 android:gravity="center"
                 android:text="@string/empty"
                 android:textAppearance="@style/normal"

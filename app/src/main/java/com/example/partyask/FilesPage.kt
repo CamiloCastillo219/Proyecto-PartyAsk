@@ -1,4 +1,5 @@
 package com.example.partyask
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -11,11 +12,12 @@ class FilesPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_files)
 
-        val guess_who = findViewById<TextView>(R.id.Guess_who)
-        guess_who.setOnClickListener {
-            val intent = Intent(this, ExplainerColection::class.java)
-            intent.putExtra("category_name", getString(R.string.guess_who_basics)) // Pasa el nombre de la categoría
-            startActivity(intent)
+        // Botones de categorías
+        val guessWho = findViewById<TextView>(R.id.Guess_who)  // Ejemplo de otro botón
+
+        // Configura cada botón para enviar la categoría correspondiente
+        guessWho.setOnClickListener {
+            navigateToExplainerCollection(getString(R.string.guess_who_basics))
         }
 
         // Configuración del BottomNavigationView
@@ -41,5 +43,12 @@ class FilesPage : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    // Función para iniciar ExplainerCollection con la categoría seleccionada
+    private fun navigateToExplainerCollection(categoryName: String) {
+        val intent = Intent(this, ExplainerColection::class.java)
+        intent.putExtra("category_name", categoryName)
+        startActivity(intent)
     }
 }

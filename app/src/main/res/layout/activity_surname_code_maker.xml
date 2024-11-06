@@ -56,7 +56,7 @@
         android:fontFamily="@font/istok_web_bold"
         android:gravity="center_horizontal|top"
         android:lineSpacingExtra="-10dp"
-        android:text="@string/choise_a_name"
+        android:text="@string/choose_a_name"
         android:textAppearance="@style/Innertitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backmain_sc" />

@@ -18,28 +18,24 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/lobbytext"
+        android:id="@+id/filetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/istok_web_bold"
-        android:text="@string/lobby"
+        android:text="@string/party_settings_modes"
         android:gravity="center"
         android:elevation="8dp"
-        android:textAppearance="@style/Title"
+        android:textAppearance="@style/Innertitle"
         app:layout_constraintTop_toTopOf="@id/topbackground"
         app:layout_constraintBottom_toBottomOf="@id/topbackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- EditText para ingresar el nombre del jugador -->
-
-
     <!-- Contenido desplazable dentro de ScrollView -->
     <ScrollView
-        android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/randomcodeback"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topbackground">
@@ -48,76 +44,110 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
-
-            <!-- Jugadores -->
-            <TextView
-                android:id="@+id/player1"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/grey_button_background"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:textAppearance="@style/Subtitle"
-                android:textColor="@color/black" />
+            android:padding="16dp">
 
             <TextView
-                android:id="@+id/player2"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/grey_button_background"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/player2"
-                android:textAppearance="@style/Subtitle"
-                android:textColor="@color/black"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/player3"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/grey_button_background"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/player3"
-                android:textAppearance="@style/Subtitle"
-                android:textColor="@color/black"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/player4"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/grey_button_background"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/player4"
-                android:textAppearance="@style/Subtitle"
-                android:textColor="@color/black"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/choosemodes"
+                android:id="@+id/playmodes"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/bordercolor"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:background="@color/white"
+                android:elevation="1dp"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/party_settings"
+                android:text="@string/selected_modes"
                 android:textAppearance="@style/normal"
                 android:textColor="@color/black" />
 
-            <!-- Botón para iniciar el juego -->
             <TextView
-                android:id="@+id/startgame"
+                android:id="@+id/Guess_who"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web"
+                android:gravity="center"
+                android:text="@string/guess_who"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/Most_propably"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web"
+                android:gravity="center"
+                android:text="@string/most_probably_of"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/true_false"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web"
+                android:gravity="center"
+                android:text="@string/true_or_false"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/free_questions"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web"
+                android:gravity="center"
+                android:text="@string/free_questions"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/timeparty"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:background="@color/white"
+                android:elevation="1dp"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:text="@string/time_party"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/Time_party"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web"
+                android:gravity="center"
+                android:text="@string/number_of_questions"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/readyoptions"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_marginTop="10dp"
@@ -126,45 +156,11 @@
                 android:focusable="true"
                 android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/start_game"
+                android:text="@string/confirm_setting"
                 android:textAppearance="@style/normal"
                 android:textColor="@color/textcolor" />
+
+
         </LinearLayout>
     </ScrollView>
-
-    <!-- Barra de navegación inferior fija -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/backgroundmenu"
-        app:itemIconSize="80dp"
-        android:elevation="8dp"
-        app:itemIconTint="@color/white"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
-
-    <!-- Parte inferior fija para el código de sala -->
-    <View
-        android:id="@+id/randomcodeback"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:background="#F0EEEE"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_navigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/randomtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:fontFamily="@font/istok_web_bold"
-        android:gravity="left"
-        android:text="Room code:"
-        android:textAppearance="@style/Innertitle"
-        app:layout_constraintBottom_toBottomOf="@id/randomcodeback"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

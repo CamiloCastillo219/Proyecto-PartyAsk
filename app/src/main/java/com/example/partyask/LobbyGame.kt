@@ -1,5 +1,6 @@
 package com.example.partyask
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -38,6 +39,20 @@ class LobbyGame : AppCompatActivity() {
 
         // Mostrar el código de sala en el TextView randomtext
         randomText.text = "Room code: $roomCode"
+
+        val settingsparty = findViewById<TextView>(R.id.choosemodes)
+        settingsparty.setOnClickListener {
+            val intent = Intent(this, ChosseModes::class.java)
+            intent.putExtra("ROOM_CODE", roomCode)
+            startActivity(intent)
+        }
+
+        val startparty = findViewById<TextView>(R.id.startgame)
+        startparty.setOnClickListener {
+            val intent = Intent(this, CategoryLoad::class.java)
+            intent.putExtra("ROOM_CODE", roomCode) // Pasa el ROOM_CODE correctamente
+            startActivity(intent)
+        }
 
         // Escuchar cambios en los jugadores para actualizar la UI
         escucharCambiosEnJugadores(roomCode)

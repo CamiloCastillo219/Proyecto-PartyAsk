@@ -23,6 +23,12 @@ class HomePage : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val goToModesview = findViewById<TextView>(R.id.exploremodes)
+        goToModesview.setOnClickListener{
+            val intent = Intent(this, ModesGames::class.java)
+            startActivity(intent)
+        }
+
         // Configuración del BottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.setOnItemSelectedListener { item ->

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,11 +18,11 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/hometext"
+        android:id="@+id/titleempty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/istok_web_bold"
-        android:text="@string/home"
+        android:text="@string/emply_space"
         android:gravity="center"
         android:elevation="8dp"
         android:textAppearance="@style/Title"
@@ -48,63 +47,62 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/HostParty"
+                android:id="@+id/empty1"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
-                android:background="@drawable/colorfullback"
+                android:background="@drawable/grey_button_background"
+                android:elevation="1dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/host_a_party"
+                android:text="@string/empty"
                 android:textAppearance="@style/normal"
-                android:textColor="@color/textcolor" />
-
-            <TextView
-                android:id="@+id/join_to_party"
-                android:layout_width="match_parent"
-                android:layout_height="91dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/colorfullback"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/jointoparty"
-                android:textAppearance="@style/normal"
-                android:textColor="@color/textcolor" />
-
-            <View
-                android:id="@+id/rectangle_2"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="24dp"
-                android:background="@color/black" />
-
-            <TextView
-                android:id="@+id/exploremodes"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/istok_web"
-                android:gravity="center"
-                android:text="@string/explore_modes"
-                android:textAppearance="@style/Subtitle"
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/explorecollections"
+                android:id="@+id/empty2"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
                 android:clickable="true"
                 android:focusable="true"
-                android:fontFamily="@font/istok_web"
+                android:fontFamily="@font/istok_web_bold"
                 android:gravity="center"
-                android:text="@string/explore_collections"
-                android:textAppearance="@style/Subtitle"
+                android:text="@string/empty"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/empty3"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:text="@string/empty"
+                android:textAppearance="@style/normal"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/empty4"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="10dp"
+                android:elevation="1dp"
+                android:background="@drawable/grey_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:text="@string/empty"
+                android:textAppearance="@style/normal"
                 android:textColor="@color/black" />
 
 

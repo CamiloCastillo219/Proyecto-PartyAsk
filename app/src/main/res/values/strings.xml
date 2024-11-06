@@ -80,4 +80,42 @@ Create an account
     <string name="join">Join</string>
     <string name="please_type_your_name_for_the_room">Please type your name for the room</string>
     <string name="player4">Player 4</string>
+    <string name="party_settings">Party settings</string>
+    <string name="party_settings_modes">Party settings</string>
+    <string name="selected_modes">selected modes</string>
+    <string name="number_of_questions">Number of questions</string>
+    <string name="confirm_setting">Confirm setting</string>
+    <string name="time_party">Time party</string>
+    <string name="category">Category</string>
+
+    <string name="guess_who_title">¿Adivina Quién?</string>
+    <string name="guess_who_explanation">
+    En el modo "Adivina Quién", cada jugador debe tratar de adivinar quién de los otros jugadores coincide con una descripción dada. Una vez que se lee una descripción o característica (por ejemplo, "¿Quién es el más aventurero?"), los jugadores deben señalar a la persona que creen que mejor encaja con esa descripción. Este modo es excelente para conocer más sobre los jugadores y descubrir cómo los ven los demás. ¡Prepárate para momentos de risa y asombro mientras intentas adivinar quién se esconde detrás de cada pista!
+</string>
+
+    <string name="most_probably_title">¿Quién es más probable que...?</string>
+    <string name="most_probably_explanation">
+    En el modo "¿Quién es más probable que...?", cada jugador debe votar sobre quién creen que es más probable que realice una determinada acción o comportamiento. Por ejemplo, si la pregunta es "¿Quién es más probable que olvide su cumpleaños?", cada jugador debe señalar a quien considera más propenso a hacer eso. Este juego pone a prueba la percepción y las expectativas que tienen los jugadores entre sí, y suele revelar datos curiosos o divertidos sobre cada persona. Ideal para jugar en grupo y conocer mejor los hábitos y personalidades de los demás.
+</string>
+
+    <string name="true_false_title">Verdadero o Falso</string>
+    <string name="true_false_explanation">
+    En el modo "Verdadero o Falso", los jugadores escuchan afirmaciones que pueden ser verdaderas o falsas, y deben decidir rápidamente cuál es la respuesta correcta. Estas afirmaciones pueden ser hechos curiosos, mitos comunes o incluso detalles personales sobre los otros jugadores. Este modo de juego es perfecto para poner a prueba el conocimiento general de los jugadores y para aprender datos interesantes o sorprendentes. También es una excelente forma de ver cuán bien conocen los jugadores los detalles de la vida de los demás o su habilidad para identificar hechos reales.
+</string>
+
+    <string name="free_questions_title">Preguntas Libres</string>
+    <string name="free_questions_explanation">
+    El modo "Preguntas Libres" permite a los jugadores hacer preguntas abiertas sin una respuesta correcta o incorrecta, fomentando la discusión y el intercambio de opiniones. Aquí, cada jugador puede expresar sus ideas y puntos de vista libremente, lo que hace que este modo sea ideal para crear conversaciones interesantes y profundas. Las preguntas pueden ser tanto divertidas como serias, y permiten explorar temas que normalmente no se discutirían. Este modo es perfecto para conocerse mejor en un ambiente relajado y de confianza.
+</string>
+
+    <string name="history_or_lie_title">Historia o Mentira</string>
+    <string name="history_or_lie_explanation">
+    En el modo "Historia o Mentira", cada jugador cuenta una historia que puede ser verdadera o inventada, y los demás deben adivinar si lo que están escuchando es una historia real o una mentira bien contada. Este modo requiere creatividad y habilidad para mantener una "póker face", ya que la clave es convencer a los otros jugadores. Es perfecto para momentos de diversión y sorpresa, ya que los jugadores deben descubrir quién tiene talento para contar historias convincentes y quién es fácil de leer. ¡Prepárate para risas, engaños y revelaciones inesperadas!
+</string>
+    <string name="emply_space">Emply space</string>
+    <string name="empty">Empty\n</string>
+    <string name="choose_a_name">Choose a name</string>
+    <string name="resultados">Resultados</string>
+
+
 </resources>

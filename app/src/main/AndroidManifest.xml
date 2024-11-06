@@ -71,6 +71,26 @@
             android:exported="true">
         </activity>
 
+        <activity android:name=".ChosseModes"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".CategoryLoad"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".Question"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".Results"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".FinPartida"
+            android:exported="true">
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

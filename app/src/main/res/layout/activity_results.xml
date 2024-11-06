@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/background_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fullbackground_quest"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="308dp"
+        android:layout_height="708dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/emplyspace_canvas"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/background_ask"
+        app:layout_constraintEnd_toStartOf="@+id/background_ask"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/background_ask"
+        app:layout_constraintTop_toBottomOf="@+id/background_ask"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultstext"
+        android:layout_width="258dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="144dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/istok_web_bold"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/resultados"
+        android:textAppearance="@style/Innertitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_ask"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <!-- Jugadores -->
+
+    <TextView
+        android:id="@+id/resultplayer1"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/grey_button_background"
+        android:elevation="5dp"
+        android:fontFamily="@font/istok_web"
+        android:gravity="center"
+        android:textAppearance="@style/Subtitle"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultstext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultplayer2"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/grey_button_background"
+        android:fontFamily="@font/istok_web"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="@string/player2"
+        android:textAppearance="@style/Subtitle"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultplayer1"
+        tools:layout_editor_absoluteX="76dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultplayer3"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/grey_button_background"
+        android:fontFamily="@font/istok_web"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="@string/player3"
+        android:textAppearance="@style/Subtitle"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultplayer2"
+        tools:layout_editor_absoluteX="76dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultplayer4"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/grey_button_background"
+        android:fontFamily="@font/istok_web"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="@string/player4"
+        android:textAppearance="@style/Subtitle"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultplayer3"
+        tools:layout_editor_absoluteX="76dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="296dp"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/background_ask"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultplayer1"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

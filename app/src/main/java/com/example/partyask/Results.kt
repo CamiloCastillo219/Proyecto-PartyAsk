@@ -95,7 +95,8 @@ class Results : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         } else {
-                            val intent = Intent(this@Results, Question::class.java)
+                            // Navega a CategoryLoad en lugar de Question
+                            val intent = Intent(this@Results, CategoryLoad::class.java)
                             intent.putExtra("ROOM_CODE", roomCode)
                             startActivity(intent)
                             finish()

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -39,6 +40,29 @@ class LobbyGame : AppCompatActivity() {
 
         // Mostrar el código de sala en el TextView randomtext
         randomText.text = "Room code: $roomCode"
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    startActivity(Intent(this, HomePage::class.java))
+                    true
+                }
+                R.id.nav_files -> {
+                    startActivity(Intent(this, FilesPage::class.java))
+                    true
+                }
+                R.id.nav_notifications -> {
+                    startActivity(Intent(this, ModesGames::class.java))
+                    true
+                }
+                R.id.nav_settings -> {
+                    startActivity(Intent(this, Settings::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
 
         val settingsparty = findViewById<TextView>(R.id.choosemodes)
         settingsparty.setOnClickListener {

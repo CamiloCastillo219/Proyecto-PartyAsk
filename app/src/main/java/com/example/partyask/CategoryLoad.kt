@@ -32,6 +32,13 @@ class CategoryLoad : AppCompatActivity() {
         // Obtiene el código de la sala desde la Intent
         codeRoom = intent.getStringExtra("ROOM_CODE") ?: ""
 
+        // Verifica si codeRoom está vacío y muestra un error si es necesario
+        if (codeRoom.isEmpty()) {
+            Toast.makeText(this, "Código de sala no recibido", Toast.LENGTH_SHORT).show()
+            finish() // Finaliza la actividad si no se recibe el roomCode
+            return
+        }
+
         // Log para verificar el valor de codeRoom
         Log.d("CategoryLoad", "Received codeRoom: $codeRoom")
 
@@ -99,3 +106,4 @@ class CategoryLoad : AppCompatActivity() {
         loadRandomCategoryFromFirebase()
     }
 }
+
